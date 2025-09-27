@@ -159,34 +159,11 @@ Consider these platforms for production deployment:
 - **Content Security Policy** - XSS protection
 - **File Upload Limits** - 10MB maximum file size
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📝 License
 
 This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](../../issues) page
-2. Create a new issue with detailed information
-3. Provide steps to reproduce the problem
-
-## 🎯 Roadmap
-
-- [ ] Multi-language support
-- [ ] PDF document processing
-- [ ] Medical terminology dictionary expansion
-- [ ] User authentication and history
-- [ ] Mobile app development
-- [ ] Integration with electronic health records (EHR)
 
 ## 🙏 Acknowledgments
 
