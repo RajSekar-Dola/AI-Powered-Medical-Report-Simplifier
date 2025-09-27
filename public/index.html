@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Report Simplifier</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-stethoscope header-icon"></i>
+                <h1>AI Medical Report Simplifier</h1>
+                <p>Upload your medical reports and get easy-to-understand explanations</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="text">
+                        <i class="fas fa-keyboard"></i>
+                        Text Input
+                    </button>
+                    <button class="tab-button" data-tab="image">
+                        <i class="fas fa-image"></i>
+                        Image Upload
+                    </button>
+                </div>
+
+                <div class="tab-content active" id="text-tab">
+                    <div class="input-group">
+                        <label for="text-input">Paste your medical report text:</label>
+                        <textarea 
+                            id="text-input" 
+                            placeholder="Example: CBC: Hemoglobin 10.2 g/dL (Low), WBC 11,200 /uL (High)"
+                            rows="6"
+                        ></textarea>
+                        <button id="process-text-btn" class="process-btn">
+                            <i class="fas fa-cogs"></i>
+                            Process Text Report
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="image-tab">
+                    <div class="input-group">
+                        <label for="image-input">Upload medical report image:</label>
+                        <div class="file-upload-area" id="file-upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Click to select or drag and drop your image</p>
+                            <p class="file-info">Supports: JPG, PNG, GIF, BMP (Max 5MB)</p>
+                            <input type="file" id="image-input" accept="image/*" hidden>
+                        </div>
+                        <button id="process-image-btn" class="process-btn" disabled>
+                            <i class="fas fa-cogs"></i>
+                            Process Image Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading-section" id="loading-section" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Processing your medical report...</p>
+                <div class="loading-steps">
+                    <div class="step" id="step-1">
+                        <i class="fas fa-eye"></i>
+                        <span>Extracting text</span>
+                    </div>
+                    <div class="step" id="step-2">
+                        <i class="fas fa-cogs"></i>
+                        <span>Normalizing tests</span>
+                    </div>
+                    <div class="step" id="step-3">
+                        <i class="fas fa-language"></i>
+                        <span>Generating summary</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section" id="results-section" style="display: none;">
+                <h2><i class="fas fa-chart-line"></i> Your Test Results</h2>
+                
+                <div class="summary-card">
+                    <h3><i class="fas fa-info-circle"></i> Summary</h3>
+                    <p id="summary-text"></p>
+                </div>
+
+                <div class="tests-grid" id="tests-grid">
+                    <!-- Test results will be populated here -->
+                </div>
+
+                <div class="explanations-card">
+                    <h3><i class="fas fa-lightbulb"></i> What This Means</h3>
+                    <ul id="explanations-list">
+                        <!-- Explanations will be populated here -->
+                    </ul>
+                </div>
+
+
+                <button id="process-another-btn" class="secondary-btn">
+                    <i class="fas fa-plus"></i>
+                    Process Another Report
+                </button>
+            </div>
+
+            <div class="error-section" id="error-section" style="display: none;">
+                <div class="error-card">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h3>Processing Error</h3>
+                    <p id="error-message"></p>
+                    <button id="try-again-btn" class="secondary-btn">
+                        <i class="fas fa-redo"></i>
+                        Try Again
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 AI Medical Report Simplifier. For educational purposes only.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
