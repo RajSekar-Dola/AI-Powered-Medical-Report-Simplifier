@@ -28,7 +28,7 @@ A powerful web application that transforms complex medical reports into easy-to-
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/RajSekar-Dola/AI-Powered-Medical-Report-Simplifier.git
    cd medical-document-processor
    ```
 
